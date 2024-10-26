@@ -10,6 +10,7 @@ import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./store/appStore";
 import Cart from "./components/Cart";
+import ScrollToTop from "./components/ScrollToTop";
 
 const About = lazy(() => import("./components/About"));
 
@@ -29,6 +30,7 @@ const AppLayout = () => {
       <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
         <div className="flex flex-col min-h-screen">
           <Header />
+          <ScrollToTop/>
           <Outlet />
         </div>
       </UserContext.Provider>
